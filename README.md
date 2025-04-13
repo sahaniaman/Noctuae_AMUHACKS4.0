@@ -1,91 +1,151 @@
-# Gazo Smart System
+# **Noctuae_AMUHACKS4.0**
 
-Gazo Smart System is a web application designed to enhance kitchen safety by monitoring gas usage, detecting leaks, and providing real-time alerts. The system includes features like valve and burner control, gas leak simulation, and user authentication.
-
----
-
-## Features
-
-- **User Authentication**: Login and sign-up functionality with secure user management.
-- **Dashboard**: Real-time monitoring of gas usage, valve and burner status, and gas leak detection.
-- **Valve and Burner Control**: Toggle valve and burner states with timers to track usage duration.
-- **Gas Leak Simulation**: Simulate gas leaks to test the system's alert mechanism.
-- **Stats Page**: View detailed statistics about gas usage and safety events.
+**A Smart Gas Monitoring System for household and industrial safety**, built using modern web technologies to provide real-time alerts and analytics on gas usage and potential hazards.
 
 ---
 
-## Tech Stack
+## 🚨 **Gazo Smart System**
 
-- **Frontend**: React, Tailwind CSS
-- **Routing**: React Router
-- **State Management**: Context API with custom hooks (`useAuth`)
-- **Icons**: React Icons
-- **Backend**: Firebase (optional for authentication)
+A responsive web application designed to monitor and manage gas levels efficiently. It alerts users of potential gas leaks and allows remote valve control for enhanced safety. It’s ideal for **households, restaurants, and industries** where gas is frequently used.
 
 ---
 
-## Folder Structure
+## 🔧 **Features**
 
-The project is organized as follows:
+- **Real-time gas leak detection**
+- **Smart emergency shutdown via valve control**
+- **Data visualization and usage analytics**
+- **User authentication** (Sign up, Login, Forgot Password)
+- **Responsive UI with Tailwind CSS**
+- **Secure access with route protection**
+
+---
+
+## 🧰 **Tech Stack**
+
+- **Frontend:** React.js
+- **Styling:** Tailwind CSS
+- **State Management:** React Context API
+- **Routing:** React Router
+- **Testing:** Jest and React Testing Library
+
+---
+
+## 🚀 **Installation**
+
+To run this project locally, follow these steps:
+
+### 1. **Clone the repository**
+```bash
+git clone https://github.com/sahaniaman/Noctuae_AMUHACKS4.0.git
+cd Noctuae_AMUHACKS4.0
+```
+
+### 2. **Install dependencies**
+```bash
+npm install
+```
+
+### 3. **Start the development server**
+```bash
+npm start
+```
+
+---
+
+## 🗂️ **Project Structure**
 
 ```
-gazo-smart-system/
-├── public/             # Static assets
+gazo-smart-system-main/
+├── .gitignore
+├── README.md
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   ├── robots.txt
+│   └── assets/
+│       └── images/
+│           ├── gazo-logo.png
+│           ├── gazo-logo copy.png
+│           └── icons/
+│               ├── flame.png
+│               └── valve.png
 ├── src/
-│   ├── components/     # Reusable UI components
-│   ├── context/        # Context API for state management
-│   ├── hooks/          # Custom React hooks
-│   ├── pages/          # Application pages (Dashboard, Stats, etc.)
-│   ├── services/       # API and Firebase service integrations
-│   ├── styles/         # Global and component-specific styles
-│   ├── App.js          # Main application component
-│   ├── index.js        # Entry point
-├── .gitignore          # Git ignore file
-├── package.json        # Project dependencies and scripts
-├── README.md           # Project documentation
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   ├── routes.js
+│   ├── setupTests.js
+│   ├── components/
+│   │   ├── auth/
+│   │   │   ├── ForgotPassword.js
+│   │   │   ├── Login.js
+│   │   │   └── SignUp.js
+│   │   ├── common/
+│   │   │   ├── Header.js
+│   │   │   ├── LoadingSpinner.js
+│   │   │   └── Navigation.js
+│   │   ├── dashboard/
+│   │   │   ├── AlertSystem.js
+│   │   │   ├── BurnerControl.js
+│   │   │   ├── GasMonitor.js
+│   │   │   └── ValveControl.js
+│   │   └── stats/
+│   │       ├── ActivityLog.js
+│   │       ├── TimeSelector.js
+│   │       └── UsageChart.js
+│   ├── contexts/
+│   │   ├── AuthContext.js
+│   │   └── GasSystemContext.js
+│   ├── hooks/
+│   │   ├── useAuth.js
+│   │   └── useGasSystem.js
+│   ├── pages/
+│   │   ├── DashboardPage.js
+│   │   ├── LoginPage.js
+│   │   ├── SignUpPage.js
+│   │   └── StatsPage.js
+│   ├── services/
+│   │   ├── authService.js
+│   │   ├── firebase.js
+│   │   └── gasMonitoringService.js
+│   ├── styles/
+│   │   ├── custom.css
+│   │   └── tailwind.css
+│   └── utils/
+│       ├── alertUtils.js
+│       └── timeUtils.js
 ```
 
 ---
 
-## Getting Started
+## 👨‍💻 **Team Noctuae**
 
-To run the project locally, follow these steps:
-
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/your-username/gazo-smart-system.git
-    cd gazo-smart-system
-    ```
-
-2. **Install dependencies**:
-    ```bash
-    npm install
-    ```
-
-3. **Start the development server**:
-    ```bash
-    npm start
-    ```
-
-4. **Build for production**:
-    ```bash
-    npm run build
-    ```
+- **Kesar** – Frontend Developer
+- **Aman** – Backend Developer
+- **Rudraksh** – UI/UX Designer
 
 ---
 
-## Contributing
+## 🌟 **Future Enhancements**
 
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -m "Add feature"`).
-4. Push to the branch (`git push origin feature-name`).
-5. Open a pull request.
+- Integration with IoT sensors
+- SMS and email alert system
+- Admin dashboard for multi-user management
 
 ---
 
-## License
+## 🏷️ **Hackathon Tags**
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+`#AMUHACKS4.0` `#CSSAMU` `#AMU`
